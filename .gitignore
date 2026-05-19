@@ -1,5 +1,5 @@
 # Build outputs (Linux)
-test[A-Z]
+test[A-Za-z0-9_-]*.out
 *.o
 *.out
 *.a
