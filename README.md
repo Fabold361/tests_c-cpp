@@ -7,45 +7,51 @@ Dieses Projekt ist mein persönliches Repository für C/C++-Übungen und alte Pr
 ## Projektstruktur
 
 - `lab1/` - Aufgaben und Testdateien aus Labor 1 (C++)
-  - `testE.cpp` - Beispielaufgabe für Lab 1
+  - `Angabe/` - Angabe als PDF
+  - `Code/testE.cpp` - Beispielaufgabe für Lab 1
 - `lab2/` - Aufgaben und Testdateien aus Labor 2 (C++)
-  - `testE.cpp` - Beispielaufgabe für Lab 2
+  - `Angabe/` - Angabe als PDF
+  - `Code/testE.cpp` - Beispielaufgabe für Lab 2
 - `lab3/` - Aufgaben und Testdateien aus Labor 3 (C++)
-  - `testA.cpp`
-  - `testB.cpp`
-  - `testC.cpp`
-  - `testD.cpp`
-- `lab4/` - Platzhalterordner für Labor 4 (C/C++)
+  - `Angabe/` - Angaben als Bilder/PDF
+  - `Code/testA.cpp`
+  - `Code/testB.cpp`
+  - `Code/testC.cpp`
+  - `Code/testD.cpp`
+  - `Code/testE.cpp`
+- `lab4/` - Aufgaben und Testdateien aus Labor 4 (C++)
+  - `Angabe/` - Angabe als Bild
+  - `Code/testB.cpp`
 - `lab5/` - Platzhalterordner für Labor 5 (C/C++)
 - `lab6/` - Platzhalterordner für Labor 6 (C/C++)
-- `.clangd` - Konfiguration für `clangd`, damit C++20 verwendet wird
+- `.gitignore` - Ignoriert Build-Dateien
 - `README.md` - Projektbeschreibung und Hinweise
 
 ## GitHub Repository
 
-Wenn du das Repo auf GitHub erstellst, steht oben `owner / repository-name`.
-Hier kannst du für den Repository-Namen beispielsweise `test` nehmen, weil das der Basisordner ist, der alles enthält.
-
-Beispiel: `github.com/dein-benutzername/test`
+`github.com/Fabold361/tests_c-cpp`
 
 ## Nutzung
 
-1. Code in den jeweiligen `labX/`-Ordner kopieren oder hinzufügen.
-2. Mit `g++` oder einem passenden Buildsystem kompilieren.
+1. Repo klonen und im Root-Ordner (`tests_c-cpp/`) in VS Code öffnen.
+2. In den jeweiligen `labX/Code/`-Ordner navigieren und die gewünschte Datei kompilieren.
 3. Die Dateien sind so organisiert, dass jede Laboraufgabe ihren eigenen Ordner bekommt.
-
-## Hinweise
-
-- Wenn neue Labore oder Prüfungsaufgaben hinzukommen, einfach einen neuen Ordner `lab4/`, `lab5/` usw. anlegen.
-- Ich kann hier auch Kommentare oder Zusammenfassungen zu jeder Aufgabe einfügen.
-- Das Repository soll als Lernordner für alte Prüfungen dienen.
 
 ## Kompilieren
 
-Beispiel:
+Vom Root-Ordner (`tests_c-cpp/`) aus:
 
 ```bash
-g++ lab2/testE.cpp -std=c++20 -o lab2/testE
+g++ -fmax-errors=1 -std=c++20 labX/Code/testX.cpp -o labX/Code/testX && ./labX/Code/testX
 ```
 
-Bei Bedarf kann später ein `Makefile` oder `CMakeLists.txt` hinzugefügt werden.
+Beispiel für Lab 4, Aufgabe B:
+
+```bash
+g++ -fmax-errors=1 -std=c++20 lab4/Code/testB.cpp -o lab4/Code/testB && ./lab4/Code/testB
+```
+
+## Hinweise
+
+- Wenn neue Labore oder Prüfungsaufgaben hinzukommen, einfach einen neuen Ordner `labX/` mit `Angabe/` und `Code/` anlegen.
+- Build-Dateien werden via `.gitignore` nicht ins Repo gepusht.
