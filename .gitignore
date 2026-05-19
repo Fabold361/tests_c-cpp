@@ -1,0 +1,13 @@
+# Build outputs (Linux)
+task
+*.o
+*.out
+*.a
+*.so
+
+# Build outputs (Windows)
+*.exe
+*.obj
+*.dll
+*.lib
+*.pdb
