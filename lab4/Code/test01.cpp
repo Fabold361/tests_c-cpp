@@ -23,7 +23,7 @@ T min_if (std::vector<T> values, func lambda){
         if (lambda(values[i])) {            // nur elemente die bedingung erfüllen werden verglichen
             if (values[i] < out){
                 out = values[i];            // kleineres element gefunden -> out überschreiben
-            }
+            } 
         }
     }
     return (out);
