@@ -1,0 +1,6 @@
+InlayHints : false
+ParameterNames: false
+DeducedTypes: false
+CompileFlags:
+    Add:
+    - -std=c++20
