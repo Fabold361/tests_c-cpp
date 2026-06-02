@@ -11,3 +11,6 @@ test[A-Za-z0-9_-]
 *.dll
 *.lib
 *.pdb
+
+# Output directory
+output/

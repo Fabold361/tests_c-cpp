@@ -22,9 +22,13 @@ Dieses Projekt ist mein persönliches Repository für C/C++-Übungen und alte Pr
 - `lab4/` - Aufgaben und Testdateien aus Labor 4 (C++)
   - `Angabe/` - Angabe als Bild
   - `Code/testB.cpp`
-- `lab5/` - Platzhalterordner für Labor 5 (C/C++)
+- `lab5/` - Aufgaben und Testdateien aus Labor 5 (C)
+  - `Angabe/` - Angaben als Bilder/PDF
+  - `Code/testE.c` - Abgabe Gruppe E: `concatenate`
+  - `Code/task.c` - Abgabe Gruppe F: `erase_all_of`
 - `lab6/` - Platzhalterordner für Labor 6 (C/C++)
-- `.gitignore` - Ignoriert Build-Dateien
+- `output/` - Kompilierte Binaries (via `.gitignore` nicht im Repo)
+- `.gitignore` - Ignoriert Build-Dateien und Output-Ordner
 - `README.md` - Projektbeschreibung und Hinweise
 
 ## GitHub Repository
@@ -39,19 +43,33 @@ Dieses Projekt ist mein persönliches Repository für C/C++-Übungen und alte Pr
 
 ## Kompilieren
 
+### C++ (lab1–lab4)
+
 Vom Root-Ordner (`tests_c-cpp/`) aus:
 
 ```bash
-g++ -fmax-errors=1 -std=c++20 labX/Code/testX.cpp -o labX/Code/testX && ./labX/Code/testX
+mkdir -p output && g++ -fmax-errors=1 -std=c++20 labX/Code/testX.cpp -o output/testX && ./output/testX
 ```
 
 Beispiel für Lab 4, Aufgabe B:
 
 ```bash
-g++ -fmax-errors=1 -std=c++20 lab4/Code/testB.cpp -o lab4/Code/testB && ./lab4/Code/testB
+mkdir -p output && g++ -fmax-errors=1 -std=c++20 lab4/Code/testB.cpp -o output/testB && ./output/testB
+```
+
+### C (lab5+)
+
+```bash
+mkdir -p output && gcc -g -fsanitize=address -fmax-errors=1 -std=c11 labX/Code/task.c -o output/task -lm && ./output/task
+```
+
+Beispiel für Lab 5, Aufgabe F:
+
+```bash
+mkdir -p output && gcc -g -fsanitize=address -fmax-errors=1 -std=c11 lab5/Code/task.c -o output/task -lm && ./output/task
 ```
 
 ## Hinweise
 
 - Wenn neue Labore oder Prüfungsaufgaben hinzukommen, einfach einen neuen Ordner `labX/` mit `Angabe/` und `Code/` anlegen.
-- Build-Dateien werden via `.gitignore` nicht ins Repo gepusht.
+- Build-Dateien und der `output/`-Ordner werden via `.gitignore` nicht ins Repo gepusht.
