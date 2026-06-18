@@ -21,9 +21,10 @@ std::vector<bool> validate(std::vector<User> users){
             if (users[i].email[j] == '@') invalid_email = 0;
             j++;
         }
-        if ((users[i].uid == i+1) && users[i].name[0] != '\0' && invalid_email == 0) output.push_back(true);
+        if ((users[i].uid == i+1) && users[i].name[0] != '\0' && invalid_email == 0) output.push_back(true);    //only checking seqential (autogengen uid) and not duplicate uid, system relies onstacking uid 
         else output.push_back(false);
         invalid_email = 1;
+        j = 0;
     }
     return output;
 }
