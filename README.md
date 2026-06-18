@@ -25,8 +25,11 @@ Dieses Projekt ist mein persönliches Repository für C/C++-Übungen und alte Pr
 - `lab5/` - Aufgaben und Testdateien aus Labor 5 (C)
   - `Angabe/` - Angaben als Bilder/PDF
   - `Code/testE.c` - Abgabe Gruppe E: `concatenate`
-  - `Code/task.c` - Abgabe Gruppe F: `erase_all_of`
-- `lab6/` - Platzhalterordner für Labor 6 (C/C++)
+  - `Code/testF.c` - Abgabe Gruppe F: `erase_all_of`
+- `lab6/` - Aufgaben und Testdateien aus Labor 6 (C/C++)
+  - `Angabe/` - Angaben als Bilder/PDF
+  - `Code/testE.c`, `Code/testE.cpp` - Aufgabe E (C und C++)
+  - `Code/testA.cpp` … `Code/testD.cpp` - Aufgaben A-D
 - `output/` - Kompilierte Binaries (via `.gitignore` nicht im Repo)
 - `.gitignore` - Ignoriert Build-Dateien und Output-Ordner
 - `README.md` - Projektbeschreibung und Hinweise
@@ -60,14 +63,16 @@ mkdir -p output && g++ -fmax-errors=1 -std=c++20 lab4/Code/testB.cpp -o output/t
 ### C (lab5+)
 
 ```bash
-mkdir -p output && gcc -g -fsanitize=address -fmax-errors=1 -std=c11 labX/Code/task.c -o output/task -lm && ./output/task
+mkdir -p output && gcc -g -fsanitize=address -fmax-errors=1 -std=c11 labX/Code/testX.c -o output/testX -lm && ./output/testX
 ```
 
 Beispiel für Lab 5, Aufgabe F:
 
 ```bash
-mkdir -p output && gcc -g -fsanitize=address -fmax-errors=1 -std=c11 lab5/Code/task.c -o output/task -lm && ./output/task
+mkdir -p output && gcc -g -fsanitize=address -fmax-errors=1 -std=c11 lab5/Code/testF.c -o output/testF -lm && ./output/testF
 ```
+
+Lab 6 enthält sowohl C- als auch C++-Dateien (z. B. `testE.c` und `testE.cpp` für dieselbe Aufgabe) - je nach Datei mit `gcc` bzw. `g++` kompilieren.
 
 ## Hinweise
 
